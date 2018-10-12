@@ -145,7 +145,7 @@ factor(c("大學生","碩士班學生","博士班學生"),
  levels = c("大學生","碩士班學生","博士班學生"))
  ordered = FALSE
  ```
-～因素是ㄧ個帶有層級（Levels）資訊的向量，我們使用 `factor()` 函數可以將向量轉換成因素向量，輸出因素向量時會將層級的資訊輸出。在轉換為因素向量時，可利??? `ordered = TRUE` 與 `levels =的參數`來排序。
+～因素是ㄧ個帶有層級（Levels）資訊的向量，我們使用 `factor()` 函數可以將向量轉換成因素向量，輸出因素向量時會將層級的資訊輸出。在轉換為因素向量時，可利用`ordered = TRUE` 與 `levels =的參數`來排序。
  
 ```{r}
 four_seasons <- c("spring", "summer", "autumn", "winter")
