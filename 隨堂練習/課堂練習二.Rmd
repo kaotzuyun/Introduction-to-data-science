@@ -74,7 +74,7 @@ class(ans)
 ```
 
 ```{r}
-# 使???C函數集結元素
+# 使用C函數集結元素
 
 x <- c(1,2,3,4) #數字向量
 x
@@ -84,7 +84,7 @@ season_2 <- "summer"
 season_3 <- "autumn"
 season_4 <- "winter"
 
-four_seasons <- c("spring", "summer", "autumn", "winter") #???字向量
+four_seasons <- c("spring", "summer", "autumn", "winter") #文字向量
 four_seasons
 
 rep("2", times = 10)
@@ -111,17 +111,16 @@ class(mixed_vars[3])
 ```
 
 ```{r}
-#???法???：中括號搭配索引值
+#方法一：中括號搭配索引值
 
 favorite_season <- four_seasons[3]
 favorite_season
 
-favorite_seasons <- four_seasons[c(-2, -4)]
-#我喜歡春天或秋天
+favorite_seasons <- four_seasons[c(-2, -4)]#我喜歡春天或秋天
 favorite_seasons
 
-#???法???：判斷運算
-???
+#方法二：判斷運算子
+
 my_favorite_season <- four_seasons == "autumn"
 four_seasons[my_favorite_season]
 
@@ -142,11 +141,11 @@ numvec1*numvec2
 ```
 
 ```{r}
-factor(c("???學???","碩???班學???","博???班學???"),
- levels = c("???學???","碩???班學???","博???班學???"))
+factor(c("大學生","碩士班學生","博士班學生"),
+ levels = c("大學生","碩士班學生","博士班學生"))
  ordered = FALSE
  ```
-～因素是???個帶有層級（Levels）資訊的向量，我們使??? `factor()` 函數可以將向量轉換成因素向量，輸出因素向量時會將層級的資訊輸出。在轉換為因素向量時，可利??? `ordered = TRUE` 與 `levels =的參數`來排序。
+～因素是ㄧ個帶有層級（Levels）資訊的向量，我們使用 `factor()` 函數可以將向量轉換成因素向量，輸出因素向量時會將層級的資訊輸出。在轉換為因素向量時，可利??? `ordered = TRUE` 與 `levels =的參數`來排序。
  
 ```{r}
 four_seasons <- c("spring", "summer", "autumn", "winter")
@@ -179,20 +178,20 @@ my_mat
 my_mat <- matrix(c(1, 2, TRUE, FALSE, 3, 4), nrow = 2)
 my_mat
 
-class(my_mat[, 2]) # 原本第???欄（2nd column）的輸入是兩個邏輯值
+class(my_mat[, 2]) # 原本第二欄（2nd column）的輸入是兩個邏輯值
 ```
 
 ```{r}
 my_mat <- matrix(1:6, nrow = 2)
 my_mat
 
-#???法???：中括號搭配索引值
+#方法一：中括號搭配索引值
 
 my_mat[2, 3] # 選出位於（2, 3）這個位置的 6
-my_mat[2, ] # 選出所有第???列（2nd row）的元素
+my_mat[2, ] # 選出所有第二列（2nd row）的元素
 my_mat[, 3] # 選出所有第三欄（2nd column）的元素
 
-#???法???：判斷運算
+#方法二：判斷運算
 
 filter <- my_mat < 6 & my_mat > 1
 my_mat[filter]
@@ -240,18 +239,18 @@ season <- c("1995-96", "2015-16")
 
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season)
 
-#???法???：中括號搭配索引值
-great_nba_teams[1, 1] # 選出第???個變數的第???個觀測值 "Chicago Bulls"
-great_nba_teams[1, ] # 選出第???個觀測值
-great_nba_teams[, 1] # 選出第???個變數
+#方法一：中括號搭配索引值
+great_nba_teams[1, 1] # 選出第一個變數的第一個觀測值 "Chicago Bulls"
+great_nba_teams[1, ] # 選出第一個觀測值
+great_nba_teams[, 1] # 選出第一個變數
 
-#???法???：使???變數名稱來選擇
+#方法二：使用變數名稱來選擇
 great_nba_teams[, "season"]
 
-# **???法三：使???變數名稱與$來選擇**
+# **方法三：使用變數名稱與$來選擇**
 great_nba_teams$team_name
 
-#???法四：使???判斷運算???
+#方法四：使用判斷運算子
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
 filter <- great_nba_teams$is_champion == TRUE
 great_nba_teams[filter, ] # 注意這個逗號
@@ -279,27 +278,27 @@ my_arr
 ```{r}
 my_arr <- array(1:20, dim = c(2, 2, 5))
 
-my_arr[, , 1] # 第???個矩陣
-my_arr[, , 2] # 第???個矩陣
+my_arr[, , 1] # 第一個矩陣
+my_arr[, , 2] # 第二個矩陣
 my_arr[, , 3] # 第三個矩陣
 my_arr[, , 4] # 第四個矩陣
 my_arr[, , 5] # 第五個矩陣
 
-my_arr[1, , 2] # 選出第???個矩陣的第???個 row（觀察值）
-my_arr[, 2, 2] # 選出第???個矩陣的第???個 column （變數
+my_arr[1, , 2] # 選出第二個矩陣的第一個 row（觀察值）
+my_arr[, 2, 2] # 選出第二個矩陣的第二個 column （變數
 
 my_arr[1, 2, 2] # 選出 7（元素）
 ```
 
 ```{r}
-# 單變數元素如???字數字、???維???字數字向量
+# 單變數元素如文字數字、一維文字數字向量
 listSample<-list(Students=c("Tom","Kobe","Emma","Amy"),Year=2017,
  Score=c(60,50,80,40),School="CGU")
 listSample
 ```
 
 ```{r}
-# 例：單變數元素、???維數字與???字向量、???維矩陣與資料框
+# 例：單變數元素、一維數字與文字向量、二維矩陣與資料框
 title <- "Great NBA Teams"
 teams <- c("Chicago Bulls", "Golden State Warriors")
 wins <- c(72, 73)
@@ -333,19 +332,19 @@ list3 <- list(c(1,2,3), 3:7)
 ```{r}
 #???法???：???雙中括號選
 
-great_nba_teams[[1]] # 選出清單中的第???個物件
-great_nba_teams[[2]] # 選出清單中的第???個物件
+great_nba_teams[[1]] # 選出清單中的第一個物件
+great_nba_teams[[2]] # 選出清單中的第二個物件
 great_nba_teams[[3]] # 選出清單中的第三個物件
 great_nba_teams[[4]] # 選出清單中的第四個物件
 
-great_nba_teams[[3]][1, ] # 選出芝加哥公???隊 1995-96 的戰績
-great_nba_teams[3][1, ] # 選出芝加哥公???隊 1995-96 的戰績會產???錯誤
+great_nba_teams[[3]][1, ] # 選出芝加哥公牛隊 1995-96 的戰績
+great_nba_teams[3][1, ] # 選出芝加哥公牛隊 1995-96 的戰績會產生錯誤
 
 #???法???：???`$物件名稱`＃有點問題
 great_nba_teams$teams # 選出 teams 這個向量
 great_nba_teams$df # 選出 df 這個資料框
 
-great_nba_teams$teams[1, ] # 選出 teams 這個向量選出芝加哥公???隊 1995-96 的戰績
+great_nba_teams$teams[1, ] # 選出 teams 這個向量選出芝加哥公牛隊 1995-96 的戰績
 great_nba_teams[[4]]$winning_percentage # 選出創紀錄的球季勝率
 ```
 
