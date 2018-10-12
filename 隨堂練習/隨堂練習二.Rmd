@@ -1,6 +1,6 @@
 ---
 title: "Homework"
-author: "°ªµµªåŠ¸"
+author: "é«˜ç´«èŠ¸"
 date: "2018/10/12"
 output:html_document: default
 ---
@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-# ¼Æ­Èªº¹Bºâ
+# æ•¸å€¼çš„é‹ç®—
 
 first_num <- 8
 second_num <- 7
@@ -23,7 +23,7 @@ first_num / second_num
 first_num^second_num
 first_num %% second_num
 
-# ¾ã¼Æªº¹Bºâ
+# æ•´æ•¸çš„é‹ç®—
 
 first_int <- 8L
 second_int <- 7L
@@ -36,7 +36,7 @@ ans <- first_int / second_int
 ans
 class(ans)
 
-# ¼Æ­È»P¾ã¼Æªº¹Bºâ
+# æ•¸å€¼èˆ‡æ•´æ•¸çš„é‹ç®—
 
 my_num <- 8
 my_int <- 7L
@@ -46,7 +46,7 @@ class(ans)
 ```
 
 ```{r}
-# ÅŞ¿è­Èªº¹Bºâ
+# é‚è¼¯å€¼çš„é‹ç®—
 
 my_num <- 0
 my_int <- 0L
@@ -60,7 +60,7 @@ my_logi <- TRUE
 my_num == my_logi
 my_int == my_logi
 
-# ¼Æ­È¡B¾ã¼Æ»PÅŞ¿è­Èªº¹Bºâ
+# æ•¸å€¼ã€æ•´æ•¸èˆ‡é‚è¼¯å€¼çš„é‹ç®—
 
 my_logi <- TRUE
 ans <- my_num + my_int + my_logi
@@ -74,9 +74,9 @@ class(ans)
 ```
 
 ```{r}
-# ¨Ï???C¨ç¼Æ¶°µ²¤¸¯À
+# ä½¿???Cå‡½æ•¸é›†çµå…ƒç´ 
 
-x <- c(1,2,3,4) #¼Æ¦r¦V¶q
+x <- c(1,2,3,4) #æ•¸å­—å‘é‡
 x
 
 season_1 <- "spring"
@@ -84,13 +84,13 @@ season_2 <- "summer"
 season_3 <- "autumn"
 season_4 <- "winter"
 
-four_seasons <- c("spring", "summer", "autumn", "winter") #???¦r¦V¶q
+four_seasons <- c("spring", "summer", "autumn", "winter") #???å­—å‘é‡
 four_seasons
 
 rep("2", times = 10)
 rep("R", times = 10)
 
-seq(from = 1, to = 10, by = 1) #µ¥®t¨ç¼Æ
+seq(from = 1, to = 10, by = 1) #ç­‰å·®å‡½æ•¸
 
 1:10
 ```
@@ -111,29 +111,29 @@ class(mixed_vars[3])
 ```
 
 ```{r}
-#???ªk???¡G¤¤¬A¸¹·f°t¯Á¤Ş­È
+#???æ³•???ï¼šä¸­æ‹¬è™Ÿæ­é…ç´¢å¼•å€¼
 
 favorite_season <- four_seasons[3]
 favorite_season
 
 favorite_seasons <- four_seasons[c(-2, -4)]
-#§Ú³ßÅw¬K¤Ñ©Î¬î¤Ñ
+#æˆ‘å–œæ­¡æ˜¥å¤©æˆ–ç§‹å¤©
 favorite_seasons
 
-#???ªk???¡G§PÂ_¹Bºâ
+#???æ³•???ï¼šåˆ¤æ–·é‹ç®—
 ???
 my_favorite_season <- four_seasons == "autumn"
 four_seasons[my_favorite_season]
 
-my_favorite_seasons <- four_seasons == "spring" | four_seasons == "autumn" # §Ú³ßÅw¬K¤Ñ©Î¬î¤Ñ
+my_favorite_seasons <- four_seasons == "spring" | four_seasons == "autumn" # æˆ‘å–œæ­¡æ˜¥å¤©æˆ–ç§‹å¤©
 four_seasons[my_favorite_seasons]
 ```
 
 ```{r}
 numvec<-1:10 # c(1,2,3,4,5,6,7,8,9,10)
 
-numvec+3 # ©Ò¦³¤¸¯À+3
-numvec*2 # ©Ò¦³¤¸¯À*2
+numvec+3 # æ‰€æœ‰å…ƒç´ +3
+numvec*2 # æ‰€æœ‰å…ƒç´ *2
 
 numvec1<-1:3 ## c(1,2,3)
 numvec2<-4:6 ## c(4,5,6)
@@ -142,11 +142,11 @@ numvec1*numvec2
 ```
 
 ```{r}
-factor(c("???¾Ç???","ºÓ???¯Z¾Ç???","³Õ???¯Z¾Ç???"),
- levels = c("???¾Ç???","ºÓ???¯Z¾Ç???","³Õ???¯Z¾Ç???"))
+factor(c("???å­¸???","ç¢©???ç­å­¸???","åš???ç­å­¸???"),
+ levels = c("???å­¸???","ç¢©???ç­å­¸???","åš???ç­å­¸???"))
  ordered = FALSE
  ```
-¡ã¦]¯À¬O???­Ó±a¦³¼h¯Å¡]Levels¡^¸ê°Tªº¦V¶q¡A§Ú­Ì¨Ï??? `factor()` ¨ç¼Æ¥i¥H±N¦V¶qÂà´«¦¨¦]¯À¦V¶q¡A¿é¥X¦]¯À¦V¶q®É·|±N¼h¯Åªº¸ê°T¿é¥X¡C¦bÂà´«¬°¦]¯À¦V¶q®É¡A¥i§Q??? `ordered = TRUE` »P `levels =ªº°Ñ¼Æ`¨Ó±Æ§Ç¡C
+ï½å› ç´ æ˜¯???å€‹å¸¶æœ‰å±¤ç´šï¼ˆLevelsï¼‰è³‡è¨Šçš„å‘é‡ï¼Œæˆ‘å€‘ä½¿??? `factor()` å‡½æ•¸å¯ä»¥å°‡å‘é‡è½‰æ›æˆå› ç´ å‘é‡ï¼Œè¼¸å‡ºå› ç´ å‘é‡æ™‚æœƒå°‡å±¤ç´šçš„è³‡è¨Šè¼¸å‡ºã€‚åœ¨è½‰æ›ç‚ºå› ç´ å‘é‡æ™‚ï¼Œå¯åˆ©??? `ordered = TRUE` èˆ‡ `levels =çš„åƒæ•¸`ä¾†æ’åºã€‚
  
 ```{r}
 four_seasons <- c("spring", "summer", "autumn", "winter")
@@ -179,20 +179,20 @@ my_mat
 my_mat <- matrix(c(1, 2, TRUE, FALSE, 3, 4), nrow = 2)
 my_mat
 
-class(my_mat[, 2]) # ­ì¥»²Ä???Äæ¡]2nd column¡^ªº¿é¤J¬O¨â­ÓÅŞ¿è­È
+class(my_mat[, 2]) # åŸæœ¬ç¬¬???æ¬„ï¼ˆ2nd columnï¼‰çš„è¼¸å…¥æ˜¯å…©å€‹é‚è¼¯å€¼
 ```
 
 ```{r}
 my_mat <- matrix(1:6, nrow = 2)
 my_mat
 
-#???ªk???¡G¤¤¬A¸¹·f°t¯Á¤Ş­È
+#???æ³•???ï¼šä¸­æ‹¬è™Ÿæ­é…ç´¢å¼•å€¼
 
-my_mat[2, 3] # ¿ï¥X¦ì©ó¡]2, 3¡^³o­Ó¦ì¸mªº 6
-my_mat[2, ] # ¿ï¥X©Ò¦³²Ä???¦C¡]2nd row¡^ªº¤¸¯À
-my_mat[, 3] # ¿ï¥X©Ò¦³²Ä¤TÄæ¡]2nd column¡^ªº¤¸¯À
+my_mat[2, 3] # é¸å‡ºä½æ–¼ï¼ˆ2, 3ï¼‰é€™å€‹ä½ç½®çš„ 6
+my_mat[2, ] # é¸å‡ºæ‰€æœ‰ç¬¬???åˆ—ï¼ˆ2nd rowï¼‰çš„å…ƒç´ 
+my_mat[, 3] # é¸å‡ºæ‰€æœ‰ç¬¬ä¸‰æ¬„ï¼ˆ2nd columnï¼‰çš„å…ƒç´ 
 
-#???ªk???¡G§PÂ_¹Bºâ
+#???æ³•???ï¼šåˆ¤æ–·é‹ç®—
 
 filter <- my_mat < 6 & my_mat > 1
 my_mat[filter]
@@ -221,11 +221,11 @@ losses <- c(10, 9)
 is_champion <- c(TRUE, FALSE)
 season <- c("1995-96", "2015-16")
 
-#???ªk???¡GstringsAsFactors = FALSE
+#???æ³•???ï¼šstringsAsFactors = FALSE
 
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
 
-#???ªk???:as.character()
+#???æ³•???:as.character()
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season)
 great_nba_teams[, 1] <- as.character(great_nba_teams[, 1])
 great_nba_teams[, 5] <- as.character(great_nba_teams[, 5])
@@ -240,21 +240,21 @@ season <- c("1995-96", "2015-16")
 
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season)
 
-#???ªk???¡G¤¤¬A¸¹·f°t¯Á¤Ş­È
-great_nba_teams[1, 1] # ¿ï¥X²Ä???­ÓÅÜ¼Æªº²Ä???­ÓÆ[´ú­È "Chicago Bulls"
-great_nba_teams[1, ] # ¿ï¥X²Ä???­ÓÆ[´ú­È
-great_nba_teams[, 1] # ¿ï¥X²Ä???­ÓÅÜ¼Æ
+#???æ³•???ï¼šä¸­æ‹¬è™Ÿæ­é…ç´¢å¼•å€¼
+great_nba_teams[1, 1] # é¸å‡ºç¬¬???å€‹è®Šæ•¸çš„ç¬¬???å€‹è§€æ¸¬å€¼ "Chicago Bulls"
+great_nba_teams[1, ] # é¸å‡ºç¬¬???å€‹è§€æ¸¬å€¼
+great_nba_teams[, 1] # é¸å‡ºç¬¬???å€‹è®Šæ•¸
 
-#???ªk???¡G¨Ï???ÅÜ¼Æ¦WºÙ¨Ó¿ï¾Ü
+#???æ³•???ï¼šä½¿???è®Šæ•¸åç¨±ä¾†é¸æ“‡
 great_nba_teams[, "season"]
 
-# **???ªk¤T¡G¨Ï???ÅÜ¼Æ¦WºÙ»P$¨Ó¿ï¾Ü**
+# **???æ³•ä¸‰ï¼šä½¿???è®Šæ•¸åç¨±èˆ‡$ä¾†é¸æ“‡**
 great_nba_teams$team_name
 
-#???ªk¥|¡G¨Ï???§PÂ_¹Bºâ???
+#???æ³•å››ï¼šä½¿???åˆ¤æ–·é‹ç®—???
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
 filter <- great_nba_teams$is_champion == TRUE
-great_nba_teams[filter, ] # ª`·N³o­Ó³r¸¹
+great_nba_teams[filter, ] # æ³¨æ„é€™å€‹é€—è™Ÿ
 ```
 
 ```{r}
@@ -267,7 +267,7 @@ season <- c("1995-96", "2015-16")
 
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
 
-# §Q???`[, "ÅÜ¼Æ¦WºÙ"]`
+# åˆ©???`[, "è®Šæ•¸åç¨±"]`
 greate_nba_teams[, "___"]
 ```
 
@@ -279,27 +279,27 @@ my_arr
 ```{r}
 my_arr <- array(1:20, dim = c(2, 2, 5))
 
-my_arr[, , 1] # ²Ä???­Ó¯x°}
-my_arr[, , 2] # ²Ä???­Ó¯x°}
-my_arr[, , 3] # ²Ä¤T­Ó¯x°}
-my_arr[, , 4] # ²Ä¥|­Ó¯x°}
-my_arr[, , 5] # ²Ä¤­­Ó¯x°}
+my_arr[, , 1] # ç¬¬???å€‹çŸ©é™£
+my_arr[, , 2] # ç¬¬???å€‹çŸ©é™£
+my_arr[, , 3] # ç¬¬ä¸‰å€‹çŸ©é™£
+my_arr[, , 4] # ç¬¬å››å€‹çŸ©é™£
+my_arr[, , 5] # ç¬¬äº”å€‹çŸ©é™£
 
-my_arr[1, , 2] # ¿ï¥X²Ä???­Ó¯x°}ªº²Ä???­Ó row¡]Æ[¹î­È¡^
-my_arr[, 2, 2] # ¿ï¥X²Ä???­Ó¯x°}ªº²Ä???­Ó column ¡]ÅÜ¼Æ
+my_arr[1, , 2] # é¸å‡ºç¬¬???å€‹çŸ©é™£çš„ç¬¬???å€‹ rowï¼ˆè§€å¯Ÿå€¼ï¼‰
+my_arr[, 2, 2] # é¸å‡ºç¬¬???å€‹çŸ©é™£çš„ç¬¬???å€‹ column ï¼ˆè®Šæ•¸
 
-my_arr[1, 2, 2] # ¿ï¥X 7¡]¤¸¯À¡^
+my_arr[1, 2, 2] # é¸å‡º 7ï¼ˆå…ƒç´ ï¼‰
 ```
 
 ```{r}
-# ³æÅÜ¼Æ¤¸¯À¦p???¦r¼Æ¦r¡B???ºû???¦r¼Æ¦r¦V¶q
+# å–®è®Šæ•¸å…ƒç´ å¦‚???å­—æ•¸å­—ã€???ç¶­???å­—æ•¸å­—å‘é‡
 listSample<-list(Students=c("Tom","Kobe","Emma","Amy"),Year=2017,
  Score=c(60,50,80,40),School="CGU")
 listSample
 ```
 
 ```{r}
-# ¨Ò¡G³æÅÜ¼Æ¤¸¯À¡B???ºû¼Æ¦r»P???¦r¦V¶q¡B???ºû¯x°}»P¸ê®Æ®Ø
+# ä¾‹ï¼šå–®è®Šæ•¸å…ƒç´ ã€???ç¶­æ•¸å­—èˆ‡???å­—å‘é‡ã€???ç¶­çŸ©é™£èˆ‡è³‡æ–™æ¡†
 title <- "Great NBA Teams"
 teams <- c("Chicago Bulls", "Golden State Warriors")
 wins <- c(72, 73)
@@ -331,22 +331,22 @@ list3 <- list(c(1,2,3), 3:7)
 ```
 
 ```{r}
-#???ªk???¡G???Âù¤¤¬A¸¹¿ï
+#???æ³•???ï¼š???é›™ä¸­æ‹¬è™Ÿé¸
 
-great_nba_teams[[1]] # ¿ï¥X²M³æ¤¤ªº²Ä???­Óª«¥ó
-great_nba_teams[[2]] # ¿ï¥X²M³æ¤¤ªº²Ä???­Óª«¥ó
-great_nba_teams[[3]] # ¿ï¥X²M³æ¤¤ªº²Ä¤T­Óª«¥ó
-great_nba_teams[[4]] # ¿ï¥X²M³æ¤¤ªº²Ä¥|­Óª«¥ó
+great_nba_teams[[1]] # é¸å‡ºæ¸…å–®ä¸­çš„ç¬¬???å€‹ç‰©ä»¶
+great_nba_teams[[2]] # é¸å‡ºæ¸…å–®ä¸­çš„ç¬¬???å€‹ç‰©ä»¶
+great_nba_teams[[3]] # é¸å‡ºæ¸…å–®ä¸­çš„ç¬¬ä¸‰å€‹ç‰©ä»¶
+great_nba_teams[[4]] # é¸å‡ºæ¸…å–®ä¸­çš„ç¬¬å››å€‹ç‰©ä»¶
 
-great_nba_teams[[3]][1, ] # ¿ï¥XªÛ¥[­ô¤½???¶¤ 1995-96 ªº¾ÔÁZ
-great_nba_teams[3][1, ] # ¿ï¥XªÛ¥[­ô¤½???¶¤ 1995-96 ªº¾ÔÁZ·|²£???¿ù»~
+great_nba_teams[[3]][1, ] # é¸å‡ºèŠåŠ å“¥å…¬???éšŠ 1995-96 çš„æˆ°ç¸¾
+great_nba_teams[3][1, ] # é¸å‡ºèŠåŠ å“¥å…¬???éšŠ 1995-96 çš„æˆ°ç¸¾æœƒç”¢???éŒ¯èª¤
 
-#???ªk???¡G???`$ª«¥ó¦WºÙ`¡­¦³ÂI°İÃD
-great_nba_teams$teams # ¿ï¥X teams ³o­Ó¦V¶q
-great_nba_teams$df # ¿ï¥X df ³o­Ó¸ê®Æ®Ø
+#???æ³•???ï¼š???`$ç‰©ä»¶åç¨±`ï¼ƒæœ‰é»å•é¡Œ
+great_nba_teams$teams # é¸å‡º teams é€™å€‹å‘é‡
+great_nba_teams$df # é¸å‡º df é€™å€‹è³‡æ–™æ¡†
 
-great_nba_teams$teams[1, ] # ¿ï¥X teams ³o­Ó¦V¶q¿ï¥XªÛ¥[­ô¤½???¶¤ 1995-96 ªº¾ÔÁZ
-great_nba_teams[[4]]$winning_percentage # ¿ï¥X³Ğ¬ö¿ıªº²y©u³Ó²v
+great_nba_teams$teams[1, ] # é¸å‡º teams é€™å€‹å‘é‡é¸å‡ºèŠåŠ å“¥å…¬???éšŠ 1995-96 çš„æˆ°ç¸¾
+great_nba_teams[[4]]$winning_percentage # é¸å‡ºå‰µç´€éŒ„çš„çƒå­£å‹ç‡
 ```
 
 ```{r}
@@ -355,8 +355,8 @@ y <- 2 * x + 5
 
 lm_fit <- lm(formula = y ~ x)
 lm_fit$coefficients
-lm_fit$coefficients[1] # ºI¶Z¬° 5
-lm_fit$coefficients[2] # x «Y¼Æ¬° 2
+lm_fit$coefficients[1] # æˆªè·ç‚º 5
+lm_fit$coefficients[2] # x ä¿‚æ•¸ç‚º 2
 ```
 
 
