@@ -1,6 +1,6 @@
 ---
 title: "Homework"
-author: "°ªµµªåŠ¸"
+author: "é«˜ç´«èŠ¸"
 date: "2018/10/12"
 output:html_document: default
 ---
@@ -9,7 +9,7 @@ output:html_document: default
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##§@·~¤@
+##ä½œæ¥­ä¸€
 
 ```{r}
 1+1
@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 1+1+2+2+3+3
 ```
 
-#code
+# code
 
 
 ```{r ref.label = knitr::all_labels(), echo = TRUE, eval = FALSE}
