@@ -9,7 +9,7 @@ output:html_document: default
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-##作業一
+## 作業一
 
 ```{r}
 1+1
