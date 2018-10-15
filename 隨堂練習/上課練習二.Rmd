@@ -220,11 +220,11 @@ losses <- c(10, 9)
 is_champion <- c(TRUE, FALSE)
 season <- c("1995-96", "2015-16")
 
-#???法???：stringsAsFactors = FALSE
+方法一：stringsAsFactors = FALSE
 
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
 
-#???法???:as.character()
+方法二:as.character()
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season)
 great_nba_teams[, 1] <- as.character(great_nba_teams[, 1])
 great_nba_teams[, 5] <- as.character(great_nba_teams[, 5])
@@ -266,7 +266,7 @@ season <- c("1995-96", "2015-16")
 
 great_nba_teams <- data.frame(team_name, wins, losses, is_champion, season, stringsAsFactors = FALSE)
 
-# 利???`[, "變數名稱"]`
+# 利用[, "變數名稱"]`
 greate_nba_teams[, "___"]
 ```
 
@@ -340,7 +340,7 @@ great_nba_teams[[4]] # 選出清單中的第四個物件
 great_nba_teams[[3]][1, ] # 選出芝加哥公牛隊 1995-96 的戰績
 great_nba_teams[3][1, ] # 選出芝加哥公牛隊 1995-96 的戰績會產生錯誤
 
-#???法???：???`$物件名稱`＃有點問題
+#方法二:用$物件名稱`＃有點問題
 great_nba_teams$teams # 選出 teams 這個向量
 great_nba_teams$df # 選出 df 這個資料框
 
