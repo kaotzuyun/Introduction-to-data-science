@@ -1,0 +1,27 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+url <- "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/bezdekIris.data"
+iris_df <- read.table(url, header = TRUE , sep ="," )
+```
+
+```{r}
+url <- "http://archive.ics.uci.edu/ml/machine-learning-databases/iris/bezdekIris.data"
+iris_df <- read.table(url, header = FALSE , sep = ",")
+names(iris_df) <- c("sepal length", "sepal width", "petal length", "petal width", "class")
+```
+
+```{r}
+file_path <- "everyday.csv" # ⾃訂
+write.csv(cars, file = file_path, row.names = FALSE )
+```
+
+
+
