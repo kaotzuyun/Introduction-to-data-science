@@ -1,7 +1,10 @@
 ---
-title: "Untitled"
+title: "輸入與輸出作業"
+author: "高紫芸"
+date: "2018/11/09"
 output: html_document
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -19,8 +22,8 @@ names(iris_df) <- c("sepal length", "sepal width", "petal length", "petal width"
 ```
 
 ```{r}
-file_path <- "everyday.csv" # ⾃訂
-write.csv(cars, file = file_path, row.names = FALSE )
+file_path <- "Building.csv" # ⾃訂
+write.csv(cars, file = file_path, row.names = FALSE)
 ```
 
 
