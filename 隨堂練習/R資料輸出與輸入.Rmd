@@ -1,7 +1,11 @@
 ---
-title: "Untitled"
+title: "輸入與輸出作業"
+author: "高紫芸"
+date: "2018/11/11"
 output: html_document
 ---
+
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
